@@ -16,9 +16,30 @@
 
     <script>
         let socket = io();
+
+        // Escucha un suceso, en este caso el connect
         socket.on('connect', function () {
-            console.log("Conectado al servidor");
-        })
+            console.log("Conectado al servidor :)");
+        });
+
+        // Escucha un suceso, en este caso el disconnect
+        socket.on('disconnect', function () {
+            console.log("Perdimos conexión con el servidor ;(");
+        });
+
+        // Enviar información
+        const envMensaje = socket.emit('enviarMensaje', {
+            /* usuario: "Fuanca", */
+            mensaje: "Qué pasa loco?"
+        }, function (resp) {
+            console.log('Respuesta server: ', resp);
+        });
+        
+        // Escuchar al servidor una información
+        socket.on('enviarMensaje', function (mensaje) {
+            console.log("Servidor", mensaje);
+        });
+
     </script>
 </body>
 
