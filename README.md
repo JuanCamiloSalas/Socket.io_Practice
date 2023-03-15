@@ -1,6 +1,6 @@
 # My Socket.io practice
 
-Este es un pequeño servidor de express listo para ejecutarse y servir la carpeta public en la web.
+Este es un pequeño servidor de express listo para ejecutarse en el cual aplico mis primeros conocimiento de los websockets.
 
 
 Comando para instalar las dependencias
@@ -8,7 +8,7 @@ Comando para instalar las dependencias
 npm install
 ```
 
-Comando para instalar las dependencias
+Comando para ejecutar el proyecto
 ```
 npm start
 ```
