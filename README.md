@@ -10,5 +10,5 @@ npm install
 
 Comando para instalar las dependencias
 ```
-npm install
+npm start
 ```
